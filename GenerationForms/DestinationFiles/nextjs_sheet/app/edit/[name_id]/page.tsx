@@ -3,15 +3,15 @@ import config_local from "../../../../commons/config-local";
 import { Box } from "@mui/material";
 import { Suspense } from "react";
 import Loading from "../../../../commons/components/Loading";
-import $[name_entity_class]ToEditDto from "../../dtos/role-to-edit.dto";
-import $[name_entity_class]EditComponent from "./ui/$[name_entity]-edit.component";
+import ApplicationToEditDto from "../../dtos/role-to-edit.dto";
+import ApplicationEditComponent from "./ui/app-edit.component";
 
-export default async function $[name_entity_class]EditPage({params} : {params: Promise<{$[name_id]: string}>}) {
-    const {$[name_id]} = await params;
+export default async function ApplicationEditPage({params} : {params: Promise<{appId: string}>}) {
+    const {appId} = await params;
     const cookieStore = await cookies();
     const token = cookieStore.get("session-bk")?.value;
     
-    // const rolePromise = fetch(`${config_local.backendUserAppUrl}/$[name_folder]/to-edit/${$[name_id]}`, {
+    // const rolePromise = fetch(`${config_local.backendUserAppUrl}/app/to-edit/${appId}`, {
     //     method: 'GET',
     //     headers: {
     //         'Authorization': `Bearer ${token}`,
@@ -34,11 +34,11 @@ export default async function $[name_entity_class]EditPage({params} : {params: P
     return(
         <>
             <Box>
-                <h1>$[title_page_edit]</h1>
+                <h1>Edit Application</h1>
             </Box>
             <Suspense fallback={<Loading/>}>
                 <Box sx={{height: '100vh'}}>
-                    <$[name_entity_class]EditComponent 
+                    <ApplicationEditComponent 
                         
                     />
                 </Box>

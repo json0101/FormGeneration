@@ -1,17 +1,17 @@
 import { Controller, SubmitHandler, UseFormReturn } from "react-hook-form";
 import { Autocomplete, Button, FormControl, Grid, TextField } from "@mui/material";
 
-export interface $[name_entity_class]FormHook {
+export interface ApplicationFormHook {
     description: string;
 }
 
 interface RoleScreenParams {
-    formHook: UseFormReturn<$[name_entity_class]FormHook, any, $[name_entity_class]FormHook>;
-    onSubmit: SubmitHandler<$[name_entity_class]FormHook>;
+    formHook: UseFormReturn<ApplicationFormHook, any, ApplicationFormHook>;
+    onSubmit: SubmitHandler<ApplicationFormHook>;
 }
 
 
-export default function $[name_entity_class]Form({formHook, onSubmit}: $[name_entity_class]ScreenParams) {
+export default function ApplicationForm({formHook, onSubmit}: ApplicationScreenParams) {
     const {register, control, handleSubmit, formState: { errors }} = formHook;
 
     return (

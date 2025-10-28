@@ -10,13 +10,13 @@ import { useRouter } from "next/navigation";
 import { Grid } from "@mui/material";
 import { DateTime } from "luxon";
 import config_local from "@/app/commons/config-local";
-import $[name_entity_class]GridDto from "../dtos/$[name_entity]-grid.dto";
+import ApplicationGridDto from "../dtos/app-grid.dto";
 
 interface Params {
-    $[name_entity]Grid: $[name_entity_class]GridDto[];
+    appGrid: ApplicationGridDto[];
 }
 
-export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
+export default function ApplicationGrid({appGrid}: Params) {
 
         const router = useRouter();
         const {confirmationMessage, closeDialog} = useMessageDialog();
@@ -27,7 +27,7 @@ export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
         //   confirmationMessage('¿Seguro que desea eliminar esta información?', '', async () => {
             startTransition(async () => {
               try {
-                const response = await fetch(`/sec/$[name_folder]/api/${params?.row.id}`, {
+                const response = await fetch(`/sec/app/api/${params?.row.id}`, {
                   method: 'DELETE',
                   headers: {
                     "Content-Type": "application/json"
@@ -41,7 +41,7 @@ export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
                 const ids = apiRef.current?.getAllRowIds().map(x => x as number);
             
                 const roleFiltered = 
-                  $[name_entity]Grid.filter(s => s.id !== params?.row.id)
+                  appGrid.filter(s => s.id !== params?.row.id)
                           .filter(x => ids?.find( id => id === x.id));
 
                 apiRef?.current?.setRows(roleFiltered);
@@ -51,7 +51,7 @@ export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
               }
             });        
         //   });        
-        }, [apiRef, closeDialog, $[name_entity]Grid]);
+        }, [apiRef, closeDialog, appGrid]);
               
         const columns = useMemo<GridColDef[]>(
             () => [
@@ -64,7 +64,7 @@ export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
                   key={0}
                   icon={
                     <Link 
-                      href={`/sec/$[name_folder]/edit/${params.id}`}
+                      href={`/sec/app/edit/${params.id}`}
                       style={{
                         textDecoration: "none",
                       }}
@@ -135,7 +135,7 @@ export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
                 <div style={{ height: "85vh", width: '100%' }}>
                     <DataGrid
                       apiRef={apiRef}
-                      rows={$[name_entity]Grid}
+                      rows={appGrid}
                       columns={columns}
                       loading={isPending}
                       rowHeight={30}
@@ -154,7 +154,7 @@ export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
                           }
                       }}
                       onRowDoubleClick={(params: GridRowParams)=> {
-                        router.push(`/sec/$[name_folder]/edit/${params.id}`);
+                        router.push(`/sec/app/edit/${params.id}`);
                       }}
                       autoPageSize
                       getRowId={(row) => row.id}

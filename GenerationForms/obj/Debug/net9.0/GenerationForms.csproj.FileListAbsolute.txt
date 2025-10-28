@@ -12,3 +12,4 @@ c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForm
 c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.pdb
 c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.genruntimeconfig.cache
 c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\ref\GenerationForms.dll
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.sourcelink.json

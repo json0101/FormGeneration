@@ -6,9 +6,9 @@ import handleApiError from "@/app/commons/handleApiError";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-import $[name_entity_class]ToEditDto from "../../../dtos/role-to-edit.dto";
-import $[name_entity_class]Form, { $[name_entity_class]FormHook } from "../../../ui/$[name_entity]-form";
-import Update$[name_entity_class]Dto from "../../../dtos/update-$[name_entity].dto";
+import ApplicationToEditDto from "../../../dtos/role-to-edit.dto";
+import ApplicationForm, { ApplicationFormHook } from "../../../ui/app-form";
+import UpdateApplicationDto from "../../../dtos/update-app.dto";
 
 interface Params {
     
@@ -18,20 +18,20 @@ export default function RoleEditComponent({}: Params) {
 
     const router = useRouter();
     
-    const formHook = useForm<$[name_entity_class]FormHook>({
+    const formHook = useForm<ApplicationFormHook>({
         defaultValues: {
             
         }
     });
 
-    const onSubmit: SubmitHandler<$[name_entity_class]FormHook> = async (value) => {
-        const update: Update$[name_entity_class]Dto = {
+    const onSubmit: SubmitHandler<ApplicationFormHook> = async (value) => {
+        const update: UpdateApplicationDto = {
         }
 
         console.log("value", value, update);
 
         try {
-            await fetch(`/sec/$[name_folder]/api/edit`, {
+            await fetch(`/sec/app/api/edit`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(update)
@@ -40,7 +40,7 @@ export default function RoleEditComponent({}: Params) {
             .then(res => res.json());
             
             toast("Actualizado");
-            router.push("/sec/$[name_folder]");
+            router.push("/sec/app");
         } catch(error) {
             const e = error as Error;
             toast(e.message);
@@ -49,7 +49,7 @@ export default function RoleEditComponent({}: Params) {
 
     return (
         <>
-            <$[name_entity_class]Form
+            <ApplicationForm
                 formHook={formHook}
                 onSubmit={onSubmit}
             />

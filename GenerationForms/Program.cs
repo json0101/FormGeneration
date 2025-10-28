@@ -45,6 +45,8 @@
     ProccessFiles(variables, dir, directoryTo);
 }
 
+Console.WriteLine("Finalizado");
+
 void ProccessFiles(Dictionary<string, string> variables, DirectoryInfo directoryFrom, DirectoryInfo directoryTo)
 {
     DeleteFilesInDirectory(directoryTo);
@@ -90,7 +92,7 @@ void SaveFiles (Dictionary<string, string> variables, DirectoryInfo from, Direct
                 newName = newName.Replace(variable.Key, variable.Value);
             }
 
-            using (StreamWriter writer = new StreamWriter($"${to.FullName}/{newName}"))
+            using (StreamWriter writer = new StreamWriter($"{to.FullName}/{newName}"))
             {
                 writer.Write(newText);
             }

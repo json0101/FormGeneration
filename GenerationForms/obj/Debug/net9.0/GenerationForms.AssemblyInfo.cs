@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenerationForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2bd7de51b611f42a4be9712dd994795d39e67a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenerationForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenerationForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

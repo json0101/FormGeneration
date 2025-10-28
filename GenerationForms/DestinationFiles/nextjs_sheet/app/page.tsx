@@ -1,17 +1,17 @@
 import { Box } from "@mui/material";
 import { cookies } from "next/headers";
 import { Suspense } from "react";
-import $[name_entity_class]Component from "./ui/role-component";
+import ApplicationComponent from "./ui/role-component";
 import config_local from "../../commons/config-local";
 import Loading from "../../commons/components/Loading";
 
 
-export default async function $[name_entity_class]Page() {
+export default async function ApplicationPage() {
 
     const cookieStore = await cookies();
     const token = cookieStore.get("session-bk")?.value;
     
-    const getRolesPromise = fetch(`${config_local.backendUserAppUrl}/$[name_folder]/grid`, {
+    const getRolesPromise = fetch(`${config_local.backendUserAppUrl}/app/grid`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -27,7 +27,7 @@ export default async function $[name_entity_class]Page() {
             </Box>
             <Box>
                 <Suspense fallback={<Loading/>}>
-                    <$[name_entity_class]Component rolePromise={getRolesPromise}/>
+                    <ApplicationComponent rolePromise={getRolesPromise}/>
                 </Suspense>
             </Box>
         </>

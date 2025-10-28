@@ -2,14 +2,16 @@ import config_local from "@/app/commons/config-local";
 import handleApiError from "@/app/commons/handleApiError";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function DELETE(req: NextRequest, props: { params: Promise<{ $[name_id]: string }>}) {
-    const params = await props.params;
+
+export async function PUT(req: NextRequest) {
+    const edit = await req.json();
 
     try{
         const token = req.cookies.get('session_bk')?.value;
         
-        const res2 = await fetch(`${config_local.backendUserAppUrl}/$[url_backend]/${params.$[name_id]}`, {
-            method: 'DELETE',
+        const res2 = await fetch(`${config_local.backendUserAppUrl}/Application`, {
+            method: 'PUT',
+            body: JSON.stringify(edit),
             headers: {
                 'Authorization': `Bearer ${token}`,
                 "Content-Type": "application/json"

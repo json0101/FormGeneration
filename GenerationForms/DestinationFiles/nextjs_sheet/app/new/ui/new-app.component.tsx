@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 
 import { use } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import $[name_entity_class]Form, { $[name_entity_class]FormHook } from "../../ui/$[name_entity]-form";
-import Create$[name_entity_class]Dto from "../../dtos/create-role.dto";
+import ApplicationForm, { ApplicationFormHook } from "../../ui/app-form";
+import CreateApplicationDto from "../../dtos/create-role.dto";
 import handleApiError from "../../../../commons/handleApiError";
 import { toast } from "react-toastify";
 import { Box } from "@mui/material";
@@ -17,16 +17,16 @@ interface Params {
 export default function NewRoleComponent({}: Params) {
     const router = useRouter();
     
-    const formHook = useForm<$[name_entity_class]FormHook>();
+    const formHook = useForm<ApplicationFormHook>();
 
-    const onSubmit: SubmitHandler<$[name_entity_class]FormHook> = async (value) => {
+    const onSubmit: SubmitHandler<ApplicationFormHook> = async (value) => {
             
-        const create: Create$[name_entity_class]Dto = {
+        const create: CreateApplicationDto = {
             
         }
 
         try {
-            await fetch(`/sec/$[name_folder]/api/new`, {
+            await fetch(`/sec/app/api/new`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(create)
@@ -35,7 +35,7 @@ export default function NewRoleComponent({}: Params) {
             .then(res => res.json());
             
             toast("Creado");
-            router.push("/sec/$[name_folder]")
+            router.push("/sec/app")
         } catch(error) {
             const e = error as Error;            
             toast(e.message);
@@ -49,7 +49,7 @@ export default function NewRoleComponent({}: Params) {
             }}>
 
             
-            <$[name_entity_class]Form
+            <ApplicationForm
                 formHook={formHook}
                 onSubmit={onSubmit}
             />
