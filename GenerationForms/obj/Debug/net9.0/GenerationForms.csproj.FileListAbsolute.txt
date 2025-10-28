@@ -1,0 +1,14 @@
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\bin\Debug\net9.0\GenerationForms.exe
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\bin\Debug\net9.0\GenerationForms.deps.json
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\bin\Debug\net9.0\GenerationForms.runtimeconfig.json
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\bin\Debug\net9.0\GenerationForms.dll
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\bin\Debug\net9.0\GenerationForms.pdb
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.AssemblyInfoInputs.cache
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.AssemblyInfo.cs
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.csproj.CoreCompileInputs.cache
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.dll
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\refint\GenerationForms.dll
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.pdb
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\GenerationForms.genruntimeconfig.cache
+c:\Users\jason.hernandez\Documents\Development\GeneratedFormsCode\GenerationForms\obj\Debug\net9.0\ref\GenerationForms.dll
