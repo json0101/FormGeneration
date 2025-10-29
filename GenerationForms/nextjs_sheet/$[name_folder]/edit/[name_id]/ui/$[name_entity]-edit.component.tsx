@@ -6,26 +6,26 @@ import handleApiError from "@/app/commons/handleApiError";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-import $[name_entity_class]ToEditDto from "../../../dtos/role-to-edit.dto";
-import $[name_entity_class]Form, { RoleFormHook } from "../../../ui/$[name_entity]-form";
+import $[name_entity_class]ToEditDto from "../../../dtos/$[name_entity]-to-edit.dto";
+import $[name_entity_class]Form, { $[name_entity_class]FormHook } from "../../../ui/$[name_entity]-form";
 import Update$[name_entity_class]Dto from "../../../dtos/update-$[name_entity].dto";
 
 interface Params {
     
 }
 
-export default function RoleEditComponent({}: Params) {
+export default function $[name_entity_class]EditComponent({}: Params) {
 
     const router = useRouter();
     
-    const formHook = useForm<RoleFormHook>({
+    const formHook = useForm<$[name_entity_class]FormHook>({
         defaultValues: {
             
         }
     });
 
-    const onSubmit: SubmitHandler<RoleFormHook> = async (value) => {
-        const update: UpdateRoleDto = {
+    const onSubmit: SubmitHandler<$[name_entity_class]FormHook> = async (value) => {
+        const update: Update$[name_entity_class]Dto = {
         }
 
         console.log("value", value, update);
@@ -49,7 +49,7 @@ export default function RoleEditComponent({}: Params) {
 
     return (
         <>
-            <RoleForm
+            <$[name_entity_class]Form
                 formHook={formHook}
                 onSubmit={onSubmit}
                 applications={applications}

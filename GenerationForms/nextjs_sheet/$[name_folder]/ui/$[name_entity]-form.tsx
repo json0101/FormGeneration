@@ -5,14 +5,14 @@ export interface $[name_entity_class]FormHook {
     description: string;
 }
 
-interface RoleScreenParams {
+interface $[name_entity_class]ScreenParams {
     formHook: UseFormReturn<$[name_entity_class]FormHook, any, $[name_entity_class]FormHook>;
     onSubmit: SubmitHandler<$[name_entity_class]FormHook>;
     applications: ApplicationResumeDto[];
 }
 
 
-export default function RoleForm({formHook, onSubmit}: $[name_entity_class]ScreenParams) {
+export default function $[name_entity_class]Form({formHook, onSubmit}: $[name_entity_class]ScreenParams) {
     const {register, control, handleSubmit, formState: { errors }} = formHook;
 
     return (

@@ -1,4 +1,4 @@
 export default interface $[name_entity_class]ToEditDto {
-    id: number;
+    $[name_id]: number;
     description: string;
 }

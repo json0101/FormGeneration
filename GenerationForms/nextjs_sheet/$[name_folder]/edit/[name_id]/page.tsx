@@ -3,10 +3,10 @@ import config_local from "../../../../commons/config-local";
 import { Box } from "@mui/material";
 import { Suspense } from "react";
 import Loading from "../../../../commons/components/Loading";
-import $[name_entity_class]ToEditDto from "../../dtos/role-to-edit.dto";
+import $[name_entity_class]ToEditDto from "../../dtos/$[name_entity]-to-edit.dto";
 import $[name_entity_class]EditComponent from "./ui/$[name_entity]-edit.component";
 
-export default async function RoleEditPage({params} : {params: Promise<{$[name_id]: string}>}) {
+export default async function $[name_entity_class]EditPage({params} : {params: Promise<{$[name_id]: string}>}) {
     const {$[name_id]} = await params;
     const cookieStore = await cookies();
     const token = cookieStore.get("session-bk")?.value;

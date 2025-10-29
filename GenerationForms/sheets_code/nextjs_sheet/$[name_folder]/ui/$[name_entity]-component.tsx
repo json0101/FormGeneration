@@ -1,7 +1,7 @@
 'use client';
 
 import { use } from "react";
-import $[name_entity_class]GridDto from "../dtos/role-grid.dto";
+import $[name_entity_class]GridDto from "../dtos/$[name_entity]-grid.dto";
 import { Box, Link } from "@mui/material";
 import $[name_entity_class]Grid from "./$[name_entity]-grid";
 

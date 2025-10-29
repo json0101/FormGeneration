@@ -11,7 +11,7 @@
 // if (command.Contains("generar"))
 {
     Console.WriteLine("Generando");
-    var dir = new DirectoryInfo("C:/Users/jason.hernandez/Documents/Development/GeneratedFormsCode/GenerationForms/sheets_code/nextjs_sheet/");
+    var dir = new DirectoryInfo("C:/Users/jason.hernandez/Documents/Development/GeneratedFormsCode/GenerationForms/sheets_code/");
     var files = GetFiles(dir);
     var variablesInFiles = GetVariables(files);
     var variablesUnique = variablesInFiles.Distinct().Order();
@@ -25,7 +25,10 @@
         { "$[name_id]", "appId" },
         { "$[title_page_edit]", "Edit Application" },
         { "$[title_page_new]", "New Application" },
+        { "$[title_list_name]", "Listado de Aplicaciones" },
         { "$[url_backend]", "Application" },
+        { "$[cshart_namespace]", "Applications" },
+        { "$[name_ef_query]", "appli" }
     };
 
     Console.WriteLine("Ingrese el valor de estas variables");

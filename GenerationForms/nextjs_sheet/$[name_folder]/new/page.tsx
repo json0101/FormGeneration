@@ -3,9 +3,9 @@ import config_local from "../../../commons/config-local";
 import { Box } from "@mui/material";
 import { Suspense } from "react";
 import Loading from "../../../commons/components/Loading";
-import New$[name_entity_class]Component from "./ui/new-role.component";
+import New$[name_entity_class]Component from "./ui/new-$[name_entity].component";
 
-export default async function NewRolePage() {
+export default async function New$[name_entity_class]Page() {
 
     const cookieStore = await cookies();
     const token = cookieStore.get("session-bk")?.value;

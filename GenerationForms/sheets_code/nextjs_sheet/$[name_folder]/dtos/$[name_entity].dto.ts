@@ -4,6 +4,6 @@ export default interface $[name_entity_class]Dto extends BaseDto {
 
 }
 
-export interface $[name_entity]ResumeDto extends BaseDto {
+export interface $[name_entity_class]ResumeDto extends BaseDto {
     description: string;
 }

@@ -8,7 +8,7 @@ export async function DELETE(req: NextRequest, props: { params: Promise<{ $[name
     try{
         const token = req.cookies.get('session_bk')?.value;
         
-        const res2 = await fetch(`${config_local.backendUserAppUrl}/role/${params.$[name_id]}`, {
+        const res2 = await fetch(`${config_local.backendUserAppUrl}/$[name_entity_class]/${params.$[name_id]}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`,

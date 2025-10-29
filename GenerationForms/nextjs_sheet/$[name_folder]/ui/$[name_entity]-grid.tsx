@@ -16,7 +16,7 @@ interface Params {
     $[name_entity]Grid: $[name_entity_class]GridDto[];
 }
 
-export default function RoleGrid({$[name_entity]Grid}: Params) {
+export default function $[name_entity_class]Grid({$[name_entity]Grid}: Params) {
 
         const router = useRouter();
         const {confirmationMessage, closeDialog} = useMessageDialog();
@@ -40,11 +40,11 @@ export default function RoleGrid({$[name_entity]Grid}: Params) {
                 
                 const ids = apiRef.current?.getAllRowIds().map(x => x as number);
             
-                const roleFiltered = 
+                const $[name_entity]Filtered = 
                   $[name_entity]Grid.filter(s => s.id !== params?.row.id)
                           .filter(x => ids?.find( id => id === x.id));
 
-                apiRef?.current?.setRows(roleFiltered);
+                apiRef?.current?.setRows($[name_entity]Filtered);
                 closeDialog();
               } catch (error) {
                 toast('Error al eliminar el rol: ' + error);

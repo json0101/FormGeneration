@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   
+  <ItemGroup>
+    <Compile Remove="sheets_code\**" />
+    <EmbeddedResource Remove="sheets_code\**" />
+    <None Remove="sheets_code\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DestinationFiles\**" />
+    <EmbeddedResource Remove="DestinationFiles\**" />
+    <None Remove="DestinationFiles\**" />
+  </ItemGroup>
 </Project>
