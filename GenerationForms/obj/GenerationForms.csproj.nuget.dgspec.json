@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj": {}
+    "C:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj": {
+    "C:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj",
+        "projectUniqueName": "C:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj",
         "projectName": "GenerationForms",
-        "projectPath": "c:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj",
+        "projectPath": "C:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj",
         "packagesPath": "C:\\Users\\jason.hernandez\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\obj\\",
+        "outputPath": "C:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
