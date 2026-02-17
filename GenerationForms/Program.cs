@@ -11,39 +11,39 @@
 // if (command.Contains("generar"))
 {
     Console.WriteLine("Generando");
-    var dir = new DirectoryInfo("C:/Users/jason.hernandez/Documents/Development/GeneratedFormsCode/GenerationForms/sheets_code/");
+    var dir = new DirectoryInfo("C:/Users/jason.hernandez/Documents/Development/GeneratedFormsCode/GenerationForms/sheets_code/report_sheet");
     var files = GetFiles(dir);
     var variablesInFiles = GetVariables(files);
     var variablesUnique = variablesInFiles.Distinct().Order();
 
-    // Dictionary<string, string> variables = new Dictionary<string, string>();
-    Dictionary<string, string> variables = new Dictionary<string, string>()
-    {
-        { "$[name_entity_class]", "Application" },
-        { "$[name_entity]", "app" },
-        { "$[name_folder]", "app" },
-        { "$[name_id]", "appId" },
-        { "$[title_page_edit]", "Edit Application" },
-        { "$[title_page_new]", "New Application" },
-        { "$[title_list_name]", "Listado de Aplicaciones" },
-        { "$[url_backend]", "Application" },
-        { "$[cshart_namespace]", "Applications" },
-        { "$[name_ef_query]", "appli" }
-    };
+    // Dictionary<string, string> variables = new Dictionary<string, string>()
+    // {
+    //     { "$[name_entity_class]", "Application" },
+    //     { "$[name_entity]", "app" },
+    //     { "$[name_folder]", "app" },
+    //     { "$[name_id]", "appId" },
+    //     { "$[title_page_edit]", "Edit Application" },
+    //     { "$[title_page_new]", "New Application" },
+    //     { "$[title_list_name]", "Listado de Aplicaciones" },
+    //     { "$[url_backend]", "Application" },
+    //     { "$[cshart_namespace]", "Applications" },
+    //     { "$[name_ef_query]", "appli" }
+    // };
 
+    Dictionary<string, string> variables = new Dictionary<string, string>();
     Console.WriteLine("Ingrese el valor de estas variables");
 
-    // foreach (var item in variablesUnique)
-    // {
-    //     Console.WriteLine($"{item}");
-    //     string? value = Console.ReadLine();
+    foreach (var item in variablesUnique)
+    {
+        Console.WriteLine($"{item}");
+        string? value = Console.ReadLine();
 
-    //     if (value == null) continue;
+        if (value == null) continue;
 
-    //     variables.Add(item, value);
-    // }
+        variables.Add(item, value);
+    }
 
-    var directoryTo = new DirectoryInfo("C:/Users/jason.hernandez/Documents/Development/GeneratedFormsCode/GenerationForms/DestinationFiles");
+    var directoryTo = new DirectoryInfo("C:/Users/jason.hernandez/Documents/Development/GeneratedFormsCode/GenerationForms/DestinationFiles/report/report_groups");
 
     ProccessFiles(variables, dir, directoryTo);
 }

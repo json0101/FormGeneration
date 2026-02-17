@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "nx5Kyye+HUc=",
   "success": true,
   "projectFilePath": "C:\\Users\\jason.hernandez\\Documents\\Desarrollo\\Tools\\FormGeneration\\GenerationForms\\GenerationForms.csproj",
@@ -9,5 +10,11 @@
     "C:\\Users\\jason.hernandez\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.12\\microsoft.aspnetcore.app.ref.9.0.12.nupkg.sha512",
     "C:\\Users\\jason.hernandez\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.12\\microsoft.netcore.app.host.win-x64.9.0.12.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "DAiFpBZStQ8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jason.hernandez\\Documents\\Development\\GeneratedFormsCode\\GenerationForms\\GenerationForms.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 82a27074cdfc3c04f96a851cf5f69c7cb967d94f
   "logs": []
 }
